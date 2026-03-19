@@ -31,22 +31,25 @@ class Inicio extends StatelessWidget {
               "Escolha do APP",
               style: TextStyle(fontSize: 30, fontWeight: .bold),),
             const SizedBox(height: 100),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                GestureDetector(
-                  onTap: () => play(context, 'Pedra'),
-                  child: Image.asset('images/pedra.png', width: 100, height: 100),
-                ),
-                GestureDetector(
-                  onTap: () => play(context, 'Papel'),
-                  child: Image.asset('images/papel.png', width: 100, height: 100),
-                ),
-                GestureDetector(
-                  onTap: () => play(context, 'Tesoura'),
-                  child: Image.asset('images/tesoura.png', width: 100, height: 100),
-                ),
-              ],
+            ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 500),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap: () => play(context, 'Pedra'),
+                    child: Image.asset('images/pedra.png', width: 100, height: 100),
+                  ),
+                  GestureDetector(
+                    onTap: () => play(context, 'Papel'),
+                    child: Image.asset('images/papel.png', width: 100, height: 100),
+                  ),
+                  GestureDetector(
+                    onTap: () => play(context, 'Tesoura'),
+                    child: Image.asset('images/tesoura.png', width: 100, height: 100),
+                  ),
+                ],
+              ),
             )
           ],
         ),

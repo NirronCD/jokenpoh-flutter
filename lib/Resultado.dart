@@ -55,7 +55,7 @@ class Resultado extends StatelessWidget {
             Text(
               "Escolha do APP",
               style: TextStyle(fontSize: 30, fontWeight: .bold),),
-            const SizedBox(height: 100),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -65,7 +65,7 @@ class Resultado extends StatelessWidget {
             Text(
               "Sua escolha",
               style: TextStyle(fontSize: 30, fontWeight: .bold),),
-            const SizedBox(height: 50),
+            const Spacer(),
             Image.asset(getImagePathResult(result)),
             Text(
               result,
@@ -79,6 +79,7 @@ class Resultado extends StatelessWidget {
                 textStyle: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)
             ), child: const Text('Tentar de novo')
             ),
+            const Spacer()
           ],
         ),
       ),
